@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jimmy's Barbershop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a') no-repeat center/cover;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .services, .barbers {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      margin: 15px;
+      padding: 20px;
+      width: 220px;
+      border-radius: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 10px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Jimmy's Barbershop 💈</h1>
+  <p>Fresh cuts. Clean fades.</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#barbers">Barbers</a>
+  <a href="#booking">Book</a>
+  <a href="#hours">Hours</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+  Look Sharp. Feel Sharp.
+</div>
+
+<div class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+
+    <div class="card">
+      <h3>Haircut</h3>
+      <p>$25</p>
+    </div>
+
+    <div class="card">
+      <h3>Fade</h3>
+      <p>$30</p>
+    </div>
+
+    <div class="card">
+      <h3>Beard Trim</h3>
+      <p>$15</p>
+    </div>
+
+    <div class="card">
+      <h3>Professional Haircut</h3>
+      <p>$40</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" id="barbers">
+  <h2>Meet Our Barbers</h2>
+  <div class="barbers">
+
+<div class="card">
+  <img src="https://i.pravatar.cc/300?img=12">
+  <h3>Jimmy ⭐</h3>
+  <p>Owner & Master Barber</p>
+</div>
+    
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1">
+      <h3>Alex</h3>
+      <p>Senior Stylist</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001">
+      <h3>Mo</h3>
+      <p>Fade Specialist</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" id="booking">
+  <h2>Book an Appointment</h2>
+  <form onsubmit="bookAppointment(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+
+    <select required>
+      <option value="">Select Barber</option>
+      <option>Jimmy</option>
+      <option>Alex</option>
+      <option>Mo</option>
+    </select>
+
+    <select required>
+      <option value="">Select Service</option>
+      <option>Haircut</option>
+      <option>Fade</option>
+      <option>Beard Trim</option>
+      <option>Professional Haircut</option>
+    </select>
+
+    <input type="date" required>
+    <input type="time" required>
+
+    <button type="submit">Reserve Now</button>
+  </form>
+</div>
+
+<div class="section" id="hours">
+  <h2>Working Hours</h2>
+  <p>Monday - Saturday: 10 AM - 8 PM</p>
+  <p>Sunday: 11 AM - 6 PM</p>
+</div>
+
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>📍 Location: Ann Arbor, Michigan</p>
+  <p>📞 Phone: 734-644-0100</p>
+</div>
+
+<footer>
+  <p>© 2026 Jimmy's Barbershop</p>
+</footer>
+
+<script>
+  function bookAppointment(e) {
+    e.preventDefault();
+    alert("Appointment booked! See you soon 💈");
+  }
+</script>
+
+</body>
+</html>
